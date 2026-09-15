@@ -1,0 +1,787 @@
+---- Minecraft Chunk IO Error Report ----
+
+// Hi. I'm Connector, and I'm a crashaholic
+=========================
+SINYTRA CONNECTOR IS PRESENT!
+Please verify issues are not caused by Connector before reporting them to mod authors.
+If you're unsure, file a report on Connector's issue tracker found at https://github.com/Sinytra/Connector/issues.
+=========================
+
+
+
+// *plays dead*
+Please make sure this issue is not caused by Sable before reporting it to other mod authors.
+If you cannot reproduce it without Sable, file a report on the issue tracker
+https://github.com/ryanhcode/sable/issues
+
+
+-- Shtreimel snapshot --
+  physics:
+    minecraft:overworld    loaded=0  ewma=0.085ms  max60=4.369ms  samples=93
+    minecraft:the_end    loaded=0  ewma=0.046ms  max60=0.063ms  samples=93
+    minecraft:the_nether    loaded=0  ewma=0.103ms  max60=4.196ms  samples=93
+  sub-levels (0 total):
+
+// Remember to backup your worlds regularly
+
+Time: 2026-09-15 11:40:48
+Description: Chunk load failure
+
+com.ishland.c2me.base.common.util.RxJavaUtils$StacklessRuntimeException: Max retries reached
+	Suppressed: java.lang.RuntimeException: Failed to load asynchronously, falling back to sync loading
+		at TRANSFORMER/c2me_rewrites_chunk_system@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunksystem.common.statuses.ReadFromDiskAsync.lambda$upgradeToThis$0(ReadFromDiskAsync.java:97) ~[c2me-neoforge-rewrites-chunk-system-mc1.21.1-0.4.0-alpha.0.120.jar%23622!/:?] {re:classloading}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.single.SingleResumeNext$ResumeMainSingleObserver.onError(SingleResumeNext.java:73) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.single.SingleCache.onError(SingleCache.java:146) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.flowable.FlowableSingleSingle$SingleElementSubscriber.onError(FlowableSingleSingle.java:97) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.subscribers.SerializedSubscriber.onError(SerializedSubscriber.java:145) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.flowable.FlowableRepeatWhen$WhenReceiver.onError(FlowableRepeatWhen.java:112) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.util.AtomicThrowable.tryTerminateConsumer(AtomicThrowable.java:94) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.flowable.FlowableFlatMap$MergeSubscriber.checkTerminate(FlowableFlatMap.java:540) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.flowable.FlowableFlatMap$MergeSubscriber.drainLoop(FlowableFlatMap.java:365) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.flowable.FlowableFlatMap$MergeSubscriber.drain(FlowableFlatMap.java:357) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.flowable.FlowableFlatMap$MergeSubscriber.onError(FlowableFlatMap.java:318) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.util.AtomicThrowable.tryTerminateConsumer(AtomicThrowable.java:94) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.flowable.FlowableZip$ZipCoordinator.drain(FlowableZip.java:239) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.flowable.FlowableZip$ZipSubscriber.onNext(FlowableZip.java:371) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.processors.UnicastProcessor.drainFused(UnicastProcessor.java:349) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.processors.UnicastProcessor.drain(UnicastProcessor.java:382) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.processors.UnicastProcessor.onNext(UnicastProcessor.java:444) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.processors.SerializedProcessor.onNext(SerializedProcessor.java:103) ~[rxjava-3.1.12.jar%23627!/:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.flowable.FlowableRepeatWhen$WhenSourceSubscriber.again(FlowableRepeatWhen.java:171) ~[?:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.flowable.FlowableRetryWhen$RetryWhenSubscriber.onError(FlowableRetryWhen.java:77) ~[?:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.single.SingleToFlowable$SingleToFlowableObserver.onError(SingleToFlowable.java:68) ~[?:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.single.SingleMap$MapSingleObserver.onError(SingleMap.java:70) ~[?:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.operators.single.SingleObserveOn$ObserveOnSingleObserver.run(SingleObserveOn.java:79) ~[?:?] {}
+		at LAYER PLUGIN/io.reactivex.rxjava3@3.1.12/io.reactivex.rxjava3.internal.schedulers.ExecutorScheduler$ExecutorWorker$BooleanRunnable.run(ExecutorScheduler.java:324) ~[?:?] {}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:148) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.IThreadExecutor from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerChunkCache$MainThreadExecutor.doRunTask(ServerChunkCache.java:559) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:122) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.IThreadExecutor from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerChunkCache$MainThreadExecutor.pollTask(ServerChunkCache.java:568) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerChunkCache.pollTask(ServerChunkCache.java:275) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:sable.mixins.json:level_accelerator.ServerChunkCacheAccessor from mod sable,pl:mixin:APP:sable.mixins.json:plot.ServerChunkCacheMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinServerChunkManager from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-base.mixins.json:access.IServerChunkManager from mod c2me_base,pl:mixin:APP:c2me-base.mixins.json:instrumentation.MixinServerChunkManager from mod c2me_base,pl:mixin:APP:c2me-base.mixins.json:scheduler.MixinServerChunkManager from mod c2me_base,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinServerChunkManager from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinServerChunkManager from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:task_scheduling.MixinServerChunkManager from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinServerChunkManager from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.pollTaskInternal(MinecraftServer.java:860) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:veil.network.mixins.json:NetworkMinecraftServerMixin from mod veil,pl:mixin:APP:veil.scheduler.mixins.json:MinecraftServerMixin from mod veil,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:rechiseled.mixins.json:MinecraftServerMixin from mod rechiseled,pl:mixin:APP:crafttweaker.mixins.json:common.access.server.AccessMinecraftServer from mod crafttweaker,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:sable.mixins.json:udp.MinecraftServerMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:shutdown.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinMinecraftServer from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:idle_tasks.autosave.enhanced_autosave.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:shutdown.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinMinecraftServer from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.pollTask(MinecraftServer.java:849) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:veil.network.mixins.json:NetworkMinecraftServerMixin from mod veil,pl:mixin:APP:veil.scheduler.mixins.json:MinecraftServerMixin from mod veil,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:rechiseled.mixins.json:MinecraftServerMixin from mod rechiseled,pl:mixin:APP:crafttweaker.mixins.json:common.access.server.AccessMinecraftServer from mod crafttweaker,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:sable.mixins.json:udp.MinecraftServerMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:shutdown.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinMinecraftServer from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:idle_tasks.autosave.enhanced_autosave.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:shutdown.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinMinecraftServer from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:132) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.IThreadExecutor from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.managedBlock(MinecraftServer.java:821) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:veil.network.mixins.json:NetworkMinecraftServerMixin from mod veil,pl:mixin:APP:veil.scheduler.mixins.json:MinecraftServerMixin from mod veil,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:rechiseled.mixins.json:MinecraftServerMixin from mod rechiseled,pl:mixin:APP:crafttweaker.mixins.json:common.access.server.AccessMinecraftServer from mod crafttweaker,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:sable.mixins.json:udp.MinecraftServerMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:shutdown.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinMinecraftServer from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:idle_tasks.autosave.enhanced_autosave.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:shutdown.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinMinecraftServer from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.mixinextras$bridge$managedBlock$300(MinecraftServer.java) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:veil.network.mixins.json:NetworkMinecraftServerMixin from mod veil,pl:mixin:APP:veil.scheduler.mixins.json:MinecraftServerMixin from mod veil,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:rechiseled.mixins.json:MinecraftServerMixin from mod rechiseled,pl:mixin:APP:crafttweaker.mixins.json:common.access.server.AccessMinecraftServer from mod crafttweaker,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:sable.mixins.json:udp.MinecraftServerMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:shutdown.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinMinecraftServer from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:idle_tasks.autosave.enhanced_autosave.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:shutdown.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinMinecraftServer from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.wrapOperation$zcm000$modernfix$managedBlock(MinecraftServer.java:2154) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:veil.network.mixins.json:NetworkMinecraftServerMixin from mod veil,pl:mixin:APP:veil.scheduler.mixins.json:MinecraftServerMixin from mod veil,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:rechiseled.mixins.json:MinecraftServerMixin from mod rechiseled,pl:mixin:APP:crafttweaker.mixins.json:common.access.server.AccessMinecraftServer from mod crafttweaker,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:sable.mixins.json:udp.MinecraftServerMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:shutdown.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinMinecraftServer from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:idle_tasks.autosave.enhanced_autosave.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:shutdown.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinMinecraftServer from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:826) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:veil.network.mixins.json:NetworkMinecraftServerMixin from mod veil,pl:mixin:APP:veil.scheduler.mixins.json:MinecraftServerMixin from mod veil,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:rechiseled.mixins.json:MinecraftServerMixin from mod rechiseled,pl:mixin:APP:crafttweaker.mixins.json:common.access.server.AccessMinecraftServer from mod crafttweaker,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:sable.mixins.json:udp.MinecraftServerMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:shutdown.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinMinecraftServer from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:idle_tasks.autosave.enhanced_autosave.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:shutdown.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinMinecraftServer from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:712) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:veil.network.mixins.json:NetworkMinecraftServerMixin from mod veil,pl:mixin:APP:veil.scheduler.mixins.json:MinecraftServerMixin from mod veil,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:rechiseled.mixins.json:MinecraftServerMixin from mod rechiseled,pl:mixin:APP:crafttweaker.mixins.json:common.access.server.AccessMinecraftServer from mod crafttweaker,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:sable.mixins.json:udp.MinecraftServerMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:shutdown.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinMinecraftServer from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:idle_tasks.autosave.enhanced_autosave.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:shutdown.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinMinecraftServer from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:veil.network.mixins.json:NetworkMinecraftServerMixin from mod veil,pl:mixin:APP:veil.scheduler.mixins.json:MinecraftServerMixin from mod veil,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:rechiseled.mixins.json:MinecraftServerMixin from mod rechiseled,pl:mixin:APP:crafttweaker.mixins.json:common.access.server.AccessMinecraftServer from mod crafttweaker,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:sable.mixins.json:udp.MinecraftServerMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:shutdown.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinMinecraftServer from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:idle_tasks.autosave.enhanced_autosave.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:shutdown.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinMinecraftServer from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+		at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {re:mixin}
+	Caused by: com.ishland.c2me.base.common.util.RxJavaUtils$StacklessRuntimeException: Max retries reached
+		Suppressed: java.util.concurrent.CompletionException: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+			at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315) ~[?:?] {re:mixin}
+			at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320) ~[?:?] {re:mixin}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770) ~[?:?] {}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.base.common.scheduler.WrappingTask.run(WrappingTask.java:45) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.pollTasks(WorkerThread.java:51) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.run(WorkerThread.java:29) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		Caused by: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:530) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+			... 3 more
+		Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+			at java.base/java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:266) ~[?:?] {}
+			at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:175) ~[?:?] {}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.FastBufferedInputStream.read(FastBufferedInputStream.java:45) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at java.base/java.io.DataInputStream.readFully(DataInputStream.java:208) ~[?:?] {re:computing_frames}
+			at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:594) ~[?:?] {re:computing_frames}
+			at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:550) ~[?:?] {re:computing_frames}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:60) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+			... 3 more
+		Suppressed: java.util.concurrent.CompletionException: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+			at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315) ~[?:?] {re:mixin}
+			at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320) ~[?:?] {re:mixin}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770) ~[?:?] {}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.base.common.scheduler.WrappingTask.run(WrappingTask.java:45) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.pollTasks(WorkerThread.java:51) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.run(WorkerThread.java:29) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		Caused by: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:530) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+			... 3 more
+		Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+			at java.base/java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:266) ~[?:?] {}
+			at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:175) ~[?:?] {}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.FastBufferedInputStream.read(FastBufferedInputStream.java:45) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at java.base/java.io.DataInputStream.readFully(DataInputStream.java:208) ~[?:?] {re:computing_frames}
+			at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:594) ~[?:?] {re:computing_frames}
+			at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:550) ~[?:?] {re:computing_frames}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:60) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+			... 3 more
+		Suppressed: java.util.concurrent.CompletionException: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+			at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315) ~[?:?] {re:mixin}
+			at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320) ~[?:?] {re:mixin}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770) ~[?:?] {}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.base.common.scheduler.WrappingTask.run(WrappingTask.java:45) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.pollTasks(WorkerThread.java:51) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.run(WorkerThread.java:29) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		Caused by: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:530) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+			... 3 more
+		Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+			at java.base/java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:266) ~[?:?] {}
+			at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:175) ~[?:?] {}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.FastBufferedInputStream.read(FastBufferedInputStream.java:45) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at java.base/java.io.DataInputStream.readFully(DataInputStream.java:208) ~[?:?] {re:computing_frames}
+			at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:594) ~[?:?] {re:computing_frames}
+			at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:550) ~[?:?] {re:computing_frames}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:60) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+			... 3 more
+		Suppressed: java.util.concurrent.CompletionException: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+			at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315) ~[?:?] {re:mixin}
+			at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320) ~[?:?] {re:mixin}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770) ~[?:?] {}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.base.common.scheduler.WrappingTask.run(WrappingTask.java:45) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.pollTasks(WorkerThread.java:51) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+			at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.run(WorkerThread.java:29) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		Caused by: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:530) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+			... 3 more
+		Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+			at java.base/java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:266) ~[?:?] {}
+			at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:175) ~[?:?] {}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.FastBufferedInputStream.read(FastBufferedInputStream.java:45) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at java.base/java.io.DataInputStream.readFully(DataInputStream.java:208) ~[?:?] {re:computing_frames}
+			at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:594) ~[?:?] {re:computing_frames}
+			at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:550) ~[?:?] {re:computing_frames}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:60) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+			at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+			at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+			... 3 more
+	Suppressed: java.util.concurrent.CompletionException: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+		at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315) ~[?:?] {re:mixin}
+		at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320) ~[?:?] {re:mixin}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770) ~[?:?] {}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.base.common.scheduler.WrappingTask.run(WrappingTask.java:45) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.pollTasks(WorkerThread.java:51) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.run(WorkerThread.java:29) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+	Caused by: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:530) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+		... 3 more
+	Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+		at java.base/java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:266) ~[?:?] {}
+		at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:175) ~[?:?] {}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.FastBufferedInputStream.read(FastBufferedInputStream.java:45) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at java.base/java.io.DataInputStream.readFully(DataInputStream.java:208) ~[?:?] {re:computing_frames}
+		at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:594) ~[?:?] {re:computing_frames}
+		at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:550) ~[?:?] {re:computing_frames}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:60) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+		... 3 more
+	Suppressed: java.util.concurrent.CompletionException: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+		at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315) ~[?:?] {re:mixin}
+		at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320) ~[?:?] {re:mixin}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770) ~[?:?] {}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.base.common.scheduler.WrappingTask.run(WrappingTask.java:45) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.pollTasks(WorkerThread.java:51) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.run(WorkerThread.java:29) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+	Caused by: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:530) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+		... 3 more
+	Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+		at java.base/java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:266) ~[?:?] {}
+		at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:175) ~[?:?] {}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.FastBufferedInputStream.read(FastBufferedInputStream.java:45) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at java.base/java.io.DataInputStream.readFully(DataInputStream.java:208) ~[?:?] {re:computing_frames}
+		at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:594) ~[?:?] {re:computing_frames}
+		at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:550) ~[?:?] {re:computing_frames}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:60) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+		... 3 more
+	Suppressed: java.util.concurrent.CompletionException: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+		at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315) ~[?:?] {re:mixin}
+		at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320) ~[?:?] {re:mixin}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770) ~[?:?] {}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.base.common.scheduler.WrappingTask.run(WrappingTask.java:45) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.pollTasks(WorkerThread.java:51) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.run(WorkerThread.java:29) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+	Caused by: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:530) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+		... 3 more
+	Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+		at java.base/java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:266) ~[?:?] {}
+		at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:175) ~[?:?] {}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.FastBufferedInputStream.read(FastBufferedInputStream.java:45) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at java.base/java.io.DataInputStream.readFully(DataInputStream.java:208) ~[?:?] {re:computing_frames}
+		at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:594) ~[?:?] {re:computing_frames}
+		at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:550) ~[?:?] {re:computing_frames}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:60) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+		... 3 more
+	Suppressed: java.util.concurrent.CompletionException: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+		at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315) ~[?:?] {re:mixin}
+		at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320) ~[?:?] {re:mixin}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770) ~[?:?] {}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.base.common.scheduler.WrappingTask.run(WrappingTask.java:45) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.pollTasks(WorkerThread.java:51) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+		at TRANSFORMER/c2me_base@0.4.0-alpha.0.120+1.21.1/com.ishland.flowsched.executor.WorkerThread.run(WorkerThread.java:29) ~[c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.jar%23522!/:?] {re:classloading}
+	Caused by: net.minecraft.nbt.ReportedNbtException: Loading NBT data
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:530) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+		... 3 more
+	Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+		at java.base/java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:266) ~[?:?] {}
+		at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:175) ~[?:?] {}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.FastBufferedInputStream.read(FastBufferedInputStream.java:45) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at java.base/java.io.DataInputStream.readFully(DataInputStream.java:208) ~[?:?] {re:computing_frames}
+		at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:594) ~[?:?] {re:computing_frames}
+		at java.base/java.io.DataInputStream.readUTF(DataInputStream.java:550) ~[?:?] {re:computing_frames}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:60) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:40) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:20) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:14) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:524) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:c2me-base.mixins.json:access.INbtCompound from mod c2me_base,pl:mixin:A,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:62) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:41) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:35) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:193) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:187) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/minecraft@1.21.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:117) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:classloading,pl:connector_pre_launch:A}
+		at TRANSFORMER/c2me_rewrites_chunkio@0.4.0-alpha.0.120+1.21.1/com.ishland.c2me.rewrites.chunkio.common.C2MEStorageThread.lambda$scheduleChunkRead$0(C2MEStorageThread.java:378) ~[c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alpha.0.120.jar%23607!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+		... 3 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: IO-Worker-2
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.lambda$storeChunkIoError$38(MinecraftServer.java:2040) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:veil.network.mixins.json:NetworkMinecraftServerMixin from mod veil,pl:mixin:APP:veil.scheduler.mixins.json:MinecraftServerMixin from mod veil,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:rechiseled.mixins.json:MinecraftServerMixin from mod rechiseled,pl:mixin:APP:crafttweaker.mixins.json:common.access.server.AccessMinecraftServer from mod crafttweaker,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:sable.mixins.json:udp.MinecraftServerMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:shutdown.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinMinecraftServer from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:idle_tasks.autosave.enhanced_autosave.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:shutdown.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinMinecraftServer from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+-- Chunk Info --
+Details:
+	Level: world
+	Dimension: minecraft:overworld
+	Storage: chunk
+	Position: [1312, 1207]
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.lambda$storeChunkIoError$38(MinecraftServer.java:2040) ~[server-1.21.1-20240808.144430-srg.jar%23247!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-modernfix.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:veil.network.mixins.json:NetworkMinecraftServerMixin from mod veil,pl:mixin:APP:veil.scheduler.mixins.json:MinecraftServerMixin from mod veil,pl:mixin:APP:balm.neoforge.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:rechiseled.mixins.json:MinecraftServerMixin from mod rechiseled,pl:mixin:APP:crafttweaker.mixins.json:common.access.server.AccessMinecraftServer from mod crafttweaker,pl:mixin:APP:ponder-common.mixins.json:accessor.MinecraftServerAccessor from mod ponder,pl:mixin:APP:xaerohud.mixins.json:MixinMinecraftServer from mod xaerominimap,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:xaeroworldmap.mixins.json:MixinMinecraftServer from mod xaeroworldmap,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:sable.mixins.json:udp.MinecraftServerMixin from mod sable,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:asynccatchers.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-fixes-general-threading-issues.mixins.json:shutdown.MixinMinecraftServer from mod c2me_fixes_general_threading_issues,pl:mixin:APP:c2me-rewrites-chunk-system.mixins.json:MixinMinecraftServer from mod c2me_rewrites_chunk_system,pl:mixin:APP:c2me-opts-scheduling.mixins.json:idle_tasks.autosave.enhanced_autosave.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:mid_tick_chunk_tasks.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-opts-scheduling.mixins.json:shutdown.MixinMinecraftServer from mod c2me_opts_scheduling,pl:mixin:APP:c2me-notickvd.mixins.json:MixinMinecraftServer from mod c2me_notickvd,pl:mixin:A,pl:connector_pre_launch:A}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {re:mixin}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {re:mixin}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Linux (amd64) version 6.12.105+deb13-amd64
+	Java Version: 21.0.12.1, Debian
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Debian
+	Memory: 2599990168 bytes (2479 MiB) / 6039797760 bytes (5760 MiB) up to 21474836480 bytes (20480 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-10500 CPU @ 3.10GHz
+	Identifier: Intel64 Family 6 Model 165 Stepping 3
+	Microarchitecture: Comet Lake
+	Frequency (GHz): 3.10
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: CometLake-S GT2 [UHD Graphics 630]
+	Graphics card #0 vendor: Intel Corporation (0x8086)
+	Graphics card #0 VRAM (MiB): 256.00
+	Graphics card #0 deviceId: 0x9bc8
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 16892.59
+	Virtual memory used (MiB): 7633.25
+	Swap memory total (MiB): 977.00
+	Swap memory used (MiB): 96.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 15898.75, total: 15915.60
+	Space in storage for workdir (MiB): available: 33084.16, total: 213024.08
+	JVM Flags: 19 total; -Xmx20G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1
+	Sinytra Connector: 2.0.0-beta.14+1.21.1
+		SINYTRA CONNECTOR IS PRESENT!
+		Please verify issues are not caused by Connector before reporting them to mod authors. If you're unsure, file a report on Connector's issue tracker.
+		Connector's issue tracker can be found at https://github.com/Sinytra/Connector/issues.
+	ModLauncher: 11.0.5+main.901c6ea8
+	ModLauncher launch target: forgeserver
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.44.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.44.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.44.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.5.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar fml TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar connector_loader TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		kotlinforforge@5.12.0
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		skinlayers3d-neoforge-1.11.1-mc1.21.1.jar         |3d-Skin-Layers                |skinlayers3d                  |1.11.1              |Manifest: NOSIGNATURE
+		aerocopycats-1.1.1.jar                            |aero_copycats                 |aerocopycats                  |1.1.0               |Manifest: NOSIGNATURE
+		appleskin-neoforge-mc1.21-3.0.9.jar               |AppleSkin                     |appleskin                     |3.0.9+mc1.21        |Manifest: NOSIGNATURE
+		architectury-13.0.8-neoforge.jar                  |Architectury                  |architectury                  |13.0.8              |Manifest: NOSIGNATURE
+		athena-neoforge-1.21.1-4.0.6.jar                  |Athena                        |athena                        |4.0.6               |Manifest: NOSIGNATURE
+		balm-neoforge-1.21.1-21.0.56.jar                  |Balm                          |balm                          |21.0.56             |Manifest: NOSIGNATURE
+		bettervillage-neoforge-1.21.1-3.3.1.jar           |Better village                |bettervillage                 |3.3.1               |Manifest: NOSIGNATURE
+		betteradmin-neoforge-1.21.1.jar                   |betteradmin                   |betteradmin                   |1.0.0               |Manifest: NOSIGNATURE
+		carryon-neoforge-1.21.1-2.2.4.4.jar               |Carry On                      |carryon                       |2.2.4               |Manifest: NOSIGNATURE
+		cbcmodernwarfare-0.0.6v+mc.1.21.1-neoforge.jar    |CBC Neo Warfare               |cbcmodernwarfare              |0.0.6v+mc.1.21.1-neo|Manifest: NOSIGNATURE
+		CBCscope+laser-1.0.0.jar                          |CBC Scope + Laser             |examplemod                    |1.0.0               |Manifest: NOSIGNATURE
+		chipped-neoforge-1.21.1-4.0.2.jar                 |Chipped                       |chipped                       |4.0.2               |Manifest: NOSIGNATURE
+		Chunky-NeoForge-1.4.23.jar                        |Chunky                        |chunky                        |1.4.23              |Manifest: NOSIGNATURE
+		cinematic_respawn-1.21.1-neoforge-1.3.0.jar       |Cinematic Respawn             |cinematic_respawn             |1.3.0               |Manifest: NOSIGNATURE
+		citadel-1.21.1-2.7.6.jar                          |Citadel                       |citadel                       |2.7.6               |Manifest: NOSIGNATURE
+		cloth-config-15.0.140-neoforge.jar                |Cloth Config v15 API          |cloth_config                  |15.0.140            |Manifest: NOSIGNATURE
+		Clumps-neoforge-1.21.1-19.0.0.1.jar               |Clumps                        |clumps                        |19.0.0.1            |Manifest: NOSIGNATURE
+		comforts-neoforge-9.0.5+1.21.1.jar                |Comforts                      |comforts                      |9.0.5+1.21.1        |Manifest: NOSIGNATURE
+		MineColonies_Compatibility-1.21.1-3.42.jar        |Compatibility addon for MineCo|minecolonies_compatibility    |3.42                |Manifest: NOSIGNATURE
+		c2me-neoforge-mc1.21.1-0.4.0-alpha.0.120.jar      |Concurrent Chunk Management En|c2me                          |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-base-mc1.21.1-0.4.0-alpha.0.120-all.|Concurrent Chunk Management En|c2me_base                     |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-client-uncapvd-mc1.21.1-0.4.0-alpha.|Concurrent Chunk Management En|c2me_client_uncapvd           |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-fixes-chunkio-threading-issues-mc1.2|Concurrent Chunk Management En|c2me_fixes_chunkio_threading_i|0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-fixes-general-threading-issues-mc1.2|Concurrent Chunk Management En|c2me_fixes_general_threading_i|0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-fixes-worldgen-threading-issues-mc1.|Concurrent Chunk Management En|c2me_fixes_worldgen_threading_|0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-fixes-worldgen-vanilla-bugs-mc1.21.1|Concurrent Chunk Management En|c2me_fixes_worldgen_vanilla_bu|0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-notickvd-mc1.21.1-0.4.0-alpha.0.120.|Concurrent Chunk Management En|c2me_notickvd                 |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-opts-chunkio-mc1.21.1-0.4.0-alpha.0.|Concurrent Chunk Management En|c2me_opts_chunkio             |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-opts-dfc-mc1.21.1-0.4.0-alpha.0.120.|Concurrent Chunk Management En|c2me_opts_dfc                 |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-opts-worldgen-general-mc1.21.1-0.4.0|Concurrent Chunk Management En|c2me_opts_worldgen_general    |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-opts-math-mc1.21.1-0.4.0-alpha.0.120|Concurrent Chunk Management En|c2me_opts_math                |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-opts-allocs-mc1.21.1-0.4.0-alpha.0.1|Concurrent Chunk Management En|c2me_opts_allocs              |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-opts-natives-math-mc1.21.1-0.4.0-alp|Concurrent Chunk Management En|c2me_opts_natives_math        |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-opts-scheduling-mc1.21.1-0.4.0-alpha|Concurrent Chunk Management En|c2me_opts_scheduling          |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-opts-worldgen-vanilla-mc1.21.1-0.4.0|Concurrent Chunk Management En|c2me_opts_worldgen_vanilla    |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-rewrites-chunkio-mc1.21.1-0.4.0-alph|Concurrent Chunk Management En|c2me_rewrites_chunkio         |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-rewrites-chunk-system-mc1.21.1-0.4.0|Concurrent Chunk Management En|c2me_rewrites_chunk_system    |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-server-utils-mc1.21.1-0.4.0-alpha.0.|Concurrent Chunk Management En|c2me_server_utils             |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		c2me-neoforge-threading-lighting-mc1.21.1-0.4.0-al|Concurrent Chunk Management En|c2me_threading_lighting       |0.4.0-alpha.0.120+1.|Manifest: NOSIGNATURE
+		conditional-mixin-neoforge-0.6.4.jar              |conditional mixin             |conditional_mixin             |0.6.4               |Manifest: NOSIGNATURE
+		ConstructionWandsRevived-1.21.1-4.0.0-NeoForge.jar|Construction Wands Revived    |constructionwand              |4.0.0               |Manifest: NOSIGNATURE
+		Controlling-neoforge-1.21.1-19.0.5.jar            |Controlling                   |controlling                   |19.0.5              |Manifest: NOSIGNATURE
+		Corgilib-NeoForge-1.21.1-5.0.0.9.jar              |CorgiLib                      |corgilib                      |5.0.0.9             |Manifest: NOSIGNATURE
+		CraftTweaker-neoforge-1.21.1-21.0.38.jar          |CraftTweaker                  |crafttweaker                  |21.0.38             |Manifest: NOSIGNATURE
+		create-1.21.1-6.0.10.jar                          |Create                        |create                        |6.0.10              |Manifest: NOSIGNATURE
+		create-aeronautics-bundled-1.21.1-1.2.1.jar       |Create Aeronautics            |aeronautics_bundled           |1.2.1               |Manifest: NOSIGNATURE
+		dev.eriksonn.aeronautics.aeronautics-neoforge-1.21|Create Aeronautics            |aeronautics                   |1.2.1               |Manifest: NOSIGNATURE
+		create-aeronautics-tournament-0.0.1.jar           |Create Aeronautics Tournament |sable_tournament              |0.0.1               |Manifest: NOSIGNATURE
+		createbigcannons-5.11.6+mc.1.21.1.jar             |Create Big Cannons            |createbigcannons              |5.11.6              |Manifest: NOSIGNATURE
+		createcobblestone-1.4.9+neoforge-1.21.1-130.jar   |Create cobblestone            |createcobblestone             |1.4.9+neoforge-1.21.|Manifest: NOSIGNATURE
+		create-confectionery1.21.1_v1.1.3b.jar            |Create Confectionery          |create_confectionery          |1.1.3.              |Manifest: NOSIGNATURE
+		createaddition-1.5.10.jar                         |Create Crafts & Additions     |createaddition                |1.5.10              |Manifest: NOSIGNATURE
+		createdeco-2.1.3.jar                              |Create Deco                   |createdeco                    |2.1.3               |Manifest: NOSIGNATURE
+		createendertransmission-2.1.1-1.21.1.jar          |Create Ender Transmission     |createendertransmission       |2.1.1-1.21.1        |Manifest: NOSIGNATURE
+		dev.ryanhcode.offroad.offroad-neoforge-1.21.1-1.2.|Create Offroad                |offroad                       |1.2.1               |Manifest: NOSIGNATURE
+		createpropulsion-1.1.4.jar                        |Create Propulsion: Simulated  |createpropulsion              |1.1.4               |Manifest: NOSIGNATURE
+		dev.simulated_team.simulated.simulated-neoforge-1.|Create Simulated              |simulated                     |1.2.1               |Manifest: NOSIGNATURE
+		create-stuff-additions1.21.1_v2.1.3.jar           |Create Stuff 'N Additions     |create_sa                     |2.1.3               |Manifest: NOSIGNATURE
+		tracks-neoforge-1.21.1-1.0.1.jar                  |Create Tracks                 |tracks                        |1.0.1               |Manifest: NOSIGNATURE
+		create_tweaked_controllers-1.21.1-1.2.7.jar       |Create Tweaked Controllers    |create_tweaked_controllers    |1.21.1-1.2.7        |Manifest: NOSIGNATURE
+		createadvancedoptimization-1.3.jar                |Create: Advanced Optimization |createadvancedoptimization    |1.3                 |Manifest: NOSIGNATURE
+		create_blazing_hot-0.7.4+neoforge-mc1.21.1.jar    |Create: Blazing Hot           |blazinghot                    |0.7.4+neoforge-mc1.2|Manifest: NOSIGNATURE
+		create_bb-1.0.7-1.21.1-Neoforge.jar               |Create: Blocks & Bogies       |create_bb                     |1.0.7               |Manifest: NOSIGNATURE
+		create-central-kitchen-2.4.0.jar                  |Create: Central Kitchen       |create_central_kitchen        |2.4.0               |Manifest: NOSIGNATURE
+		create_connected-1.1.16-mc1.21.1.jar              |Create: Connected             |create_connected              |1.1.16-mc1.21.1     |Manifest: NOSIGNATURE
+		copycats-3.0.4+mc.1.21.1-neoforge.jar             |Create: Copycats+             |copycats                      |3.0.4+mc.1.21.1-neof|Manifest: NOSIGNATURE
+		CreateDragonsPlus-1.10.1.jar                      |Create: Dragons Plus          |create_dragons_plus           |1.10.1              |Manifest: NOSIGNATURE
+		create-enchantment-industry-2.3.1.jar             |Create: Enchantment Industry  |create_enchantment_industry   |2.3.1               |Manifest: NOSIGNATURE
+		escalated-1.3.0-mc.1.21.1.jar                     |Create: Escalated             |escalated                     |1.3.0               |Manifest: NOSIGNATURE
+		create_radar-0.4.8-1.21.1.jar                     |Create: Radars                |create_radar                  |0.4.4-1.21.1        |Manifest: NOSIGNATURE
+		railways-0.3.0-alpha.2+neoforge-mc1.21.1.jar      |Create: Steam 'n' Rails 1.21.1|railways                      |0.3.0-alpha.2+neofor|Manifest: NOSIGNATURE
+		tfmg-1.2.0.jar                                    |Create: The Factory Must Grow |tfmg                          |1.2.0               |Manifest: NOSIGNATURE
+		createcolonies-2.0.4.jar                          |CreateColonies                |createcolonies                |2.0.4               |Manifest: NOSIGNATURE
+		curios-neoforge-9.5.1+1.21.1.jar                  |Curios API                    |curios                        |9.5.1+1.21.1        |Manifest: NOSIGNATURE
+		Data_Anchor-neoforge-1.21.1-2.0.0.14.jar          |Data Anchor                   |dataanchor                    |2.0.0.14            |Manifest: NOSIGNATURE
+		DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar|Distant Horizons              |distanthorizons               |3.0.3-b             |Manifest: NOSIGNATURE
+		domum-ornamentum-1.0.231-main.jar                 |Domum Ornamentum              |domum_ornamentum              |1.0.231             |Manifest: NOSIGNATURE
+		drivebywire-0.2.8.jar                             |Drive By Wire                 |drivebywire                   |0.2.8               |Manifest: NOSIGNATURE
+		effortlessbuilding-4.1+1.21.1.jar                 |Effortless Building           |effortlessbuilding            |4.1                 |Manifest: NOSIGNATURE
+		Enhanced-Celestials-NeoForge-1.21.1-6.0.2.5.jar   |Enhanced Celestials           |enhancedcelestials            |6.0.2.5             |Manifest: NOSIGNATURE
+		fallingleaves-1.21.1-2.5.1.jar                    |Fallingleaves                 |fallingleaves                 |2.5.1               |Manifest: NOSIGNATURE
+		FarmersDelight-1.21.1-1.3.2.jar                   |Farmer's Delight              |farmersdelight                |1.3.2               |Manifest: NOSIGNATURE
+		ferritecore-7.0.3-neoforge.jar                    |Ferrite Core                  |ferritecore                   |7.0.3               |Manifest: 41:ce:50:66:d1:a0:05:ce:a1:0e:02:85:9b:46:64:e0:bf:2e:cf:60:30:9a:fe:0c:27:e0:63:66:9a:84:ce:8a
+		flywheel-neoforge-1.21.1-1.0.6.jar                |Flywheel                      |flywheel                      |1.0.6               |Manifest: NOSIGNATURE
+		forgified-fabric-api-0.116.7+2.2.4+1.21.1.jar     |Forgified Fabric API          |fabric_api                    |0.116.7+2.2.4+1.21.1|Manifest: NOSIGNATURE
+		fabric-api-base-0.4.42+d1308ded19.jar             |Forgified Fabric API Base     |fabric_api_base               |0.4.42+d1308ded19   |Manifest: NOSIGNATURE
+		fabric-api-lookup-api-v1-1.6.71+c290471319.jar    |Forgified Fabric API Lookup AP|fabric_api_lookup_api_v1      |1.6.71+c290471319   |Manifest: NOSIGNATURE
+		fabric-biome-api-v1-13.0.31+1e62d33c19.jar        |Forgified Fabric Biome API (v1|fabric_biome_api_v1           |13.0.31+1e62d33c19  |Manifest: NOSIGNATURE
+		fabric-block-api-v1-1.1.0+b0c22bb819.jar          |Forgified Fabric Block API (v1|fabric_block_api_v1           |1.1.0+b0c22bb819    |Manifest: NOSIGNATURE
+		fabric-blockrenderlayer-v1-1.1.52+c290471319.jar  |Forgified Fabric BlockRenderLa|fabric_blockrenderlayer_v1    |1.1.52+c290471319   |Manifest: NOSIGNATURE
+		fabric-block-view-api-v2-1.0.11+e9036fd419.jar    |Forgified Fabric BlockView API|fabric_block_view_api_v2      |1.0.11+e9036fd419   |Manifest: NOSIGNATURE
+		fabric-client-tags-api-v1-1.1.15+e053909619.jar   |Forgified Fabric Client Tags  |fabric_client_tags_api_v1     |1.1.15+e053909619   |Manifest: NOSIGNATURE
+		fabric-command-api-v2-2.2.28+36d727be19.jar       |Forgified Fabric Command API (|fabric_command_api_v2         |2.2.28+36d727be19   |Manifest: NOSIGNATURE
+		fabric-content-registries-v0-8.0.19+5e0d320019.jar|Forgified Fabric Content Regis|fabric_content_registries_v0  |8.0.19+5e0d320019   |Manifest: NOSIGNATURE
+		fabric-convention-tags-v1-2.1.5+7f945d5b19.jar    |Forgified Fabric Convention Ta|fabric_convention_tags_v1     |2.1.5+7f945d5b19    |Manifest: NOSIGNATURE
+		fabric-convention-tags-v2-2.11.1+87e5848019.jar   |Forgified Fabric Convention Ta|fabric_convention_tags_v2     |2.11.1+87e5848019   |Manifest: NOSIGNATURE
+		fabric-data-attachment-api-v1-1.4.5+26d408aa19.jar|Forgified Fabric Data Attachme|fabric_data_attachment_api_v1 |1.4.5+26d408aa19    |Manifest: NOSIGNATURE
+		fabric-data-generation-api-v1-20.2.34+a4c3605619.j|Forgified Fabric Data Generati|fabric_data_generation_api_v1 |20.2.34+a4c3605619  |Manifest: NOSIGNATURE
+		fabric-entity-events-v1-1.8.0+5ede667619.jar      |Forgified Fabric Entity Events|fabric_entity_events_v1       |1.8.0+5ede667619    |Manifest: NOSIGNATURE
+		fabric-events-interaction-v0-0.7.13+86e0887119.jar|Forgified Fabric Events Intera|fabric_events_interaction_v0  |0.7.13+86e0887119   |Manifest: NOSIGNATURE
+		fabric-game-rule-api-v1-1.0.53+36d727be19.jar     |Forgified Fabric Game Rule API|fabric_game_rule_api_v1       |1.0.53+36d727be19   |Manifest: NOSIGNATURE
+		fabric-gametest-api-v1-2.0.5+29f188ce19.jar       |Forgified Fabric Game Test API|fabric_gametest_api_v1        |2.0.5+29f188ce19    |Manifest: NOSIGNATURE
+		fabric-item-api-v1-11.2.0+0c57911319.jar          |Forgified Fabric Item API (v1)|fabric_item_api_v1            |11.2.0+0c57911319   |Manifest: NOSIGNATURE
+		fabric-item-group-api-v1-4.1.7+e324903319.jar     |Forgified Fabric Item Group AP|fabric_item_group_api_v1      |4.1.7+e324903319    |Manifest: NOSIGNATURE
+		fabric-key-binding-api-v1-1.0.47+62cc7ce119.jar   |Forgified Fabric Key Binding A|fabric_key_binding_api_v1     |1.0.47+62cc7ce119   |Manifest: NOSIGNATURE
+		fabric-lifecycle-events-v1-2.6.0+e40d8add19.jar   |Forgified Fabric Lifecycle Eve|fabric_lifecycle_events_v1    |2.6.0+e40d8add19    |Manifest: NOSIGNATURE
+		fabric-loot-api-v2-3.0.15+a3ee712d19.jar          |Forgified Fabric Loot API (v2)|fabric_loot_api_v2            |3.0.15+a3ee712d19   |Manifest: NOSIGNATURE
+		fabric-loot-api-v3-1.0.3+333dfad919.jar           |Forgified Fabric Loot API (v3)|fabric_loot_api_v3            |1.0.3+333dfad919    |Manifest: NOSIGNATURE
+		fabric-message-api-v1-6.0.14+6a754fce19.jar       |Forgified Fabric Message API (|fabric_message_api_v1         |6.0.14+6a754fce19   |Manifest: NOSIGNATURE
+		fabric-model-loading-api-v1-2.1.0+6e8f52c719.jar  |Forgified Fabric Model Loading|fabric_model_loading_api_v1   |2.1.0+6e8f52c719    |Manifest: NOSIGNATURE
+		fabric-networking-api-v1-4.3.0+30a980d919.jar     |Forgified Fabric Networking AP|fabric_networking_api_v1      |4.3.0+30a980d919    |Manifest: NOSIGNATURE
+		fabric-object-builder-api-v1-15.2.1+cc242efd19.jar|Forgified Fabric Object Builde|fabric_object_builder_api_v1  |15.2.1+cc242efd19   |Manifest: NOSIGNATURE
+		fabric-particles-v1-4.0.2+824f924c19.jar          |Forgified Fabric Particles (v1|fabric_particles_v1           |4.0.2+824f924c19    |Manifest: NOSIGNATURE
+		fabric-recipe-api-v1-5.0.15+59440bcc19.jar        |Forgified Fabric Recipe API (v|fabric_recipe_api_v1          |5.0.15+59440bcc19   |Manifest: NOSIGNATURE
+		fabric-registry-sync-v0-5.3.1+f9aace1619.jar      |Forgified Fabric Registry Sync|fabric_registry_sync_v0       |5.3.1+f9aace1619    |Manifest: NOSIGNATURE
+		fabric-renderer-indigo-1.7.1+9125b6dc19.jar       |Forgified Fabric Renderer - In|fabric_renderer_indigo        |1.7.1+9125b6dc19    |Manifest: NOSIGNATURE
+		fabric-renderer-api-v1-3.4.1+9125b6dc19.jar       |Forgified Fabric Renderer API |fabric_renderer_api_v1        |3.4.1+9125b6dc19    |Manifest: NOSIGNATURE
+		fabric-rendering-v1-5.1.0+1a09bd5a19.jar          |Forgified Fabric Rendering (v1|fabric_rendering_v1           |5.1.0+1a09bd5a19    |Manifest: NOSIGNATURE
+		fabric-rendering-data-attachment-v1-0.3.49+73761d2|Forgified Fabric Rendering Dat|fabric_rendering_data_attachme|0.3.49+73761d2e19   |Manifest: NOSIGNATURE
+		fabric-rendering-fluids-v1-3.1.6+a51883b219.jar   |Forgified Fabric Rendering Flu|fabric_rendering_fluids_v1    |3.1.6+a51883b219    |Manifest: NOSIGNATURE
+		fabric-resource-conditions-api-v1-4.3.0+5bdd099819|Forgified Fabric Resource Cond|fabric_resource_conditions_api|4.3.0+5bdd099819    |Manifest: NOSIGNATURE
+		fabric-resource-loader-v0-1.3.1+4ea8954419.jar    |Forgified Fabric Resource Load|fabric_resource_loader_v0     |1.3.1+4ea8954419    |Manifest: NOSIGNATURE
+		fabric-screen-api-v1-2.0.25+0ae1214819.jar        |Forgified Fabric Screen API (v|fabric_screen_api_v1          |2.0.25+0ae1214819   |Manifest: NOSIGNATURE
+		fabric-screen-handler-api-v1-1.3.90+8dbc56dd19.jar|Forgified Fabric Screen Handle|fabric_screen_handler_api_v1  |1.3.90+8dbc56dd19   |Manifest: NOSIGNATURE
+		fabric-sound-api-v1-1.0.23+10b84f8419.jar         |Forgified Fabric Sound API (v1|fabric_sound_api_v1           |1.0.23+10b84f8419   |Manifest: NOSIGNATURE
+		fabric-transfer-api-v1-5.4.3+a25cb45619.jar       |Forgified Fabric Transfer API |fabric_transfer_api_v1        |5.4.3+a25cb45619    |Manifest: NOSIGNATURE
+		fabric-transitive-access-wideners-v1-6.2.0+6c854b6|Forgified Fabric Transitive Ac|fabric_transitive_access_widen|6.2.0+6c854b6f19    |Manifest: NOSIGNATURE
+		fracturepoint-1.21.1-3.0.0-PT1-fix.jar            |Fracture Point                |fracturepoint                 |3.0.0-PT1-fix       |Manifest: NOSIGNATURE
+		FramedBlocks-10.5.3.jar                           |FramedBlocks                  |framedblocks                  |10.5.3              |Manifest: NOSIGNATURE
+		fusion-1.2.12-neoforge-mc1.21.1.jar               |Fusion                        |fusion                        |1.2.12              |Manifest: NOSIGNATURE
+		geckolib-neoforge-1.21.1-4.8.4.jar                |GeckoLib 4                    |geckolib                      |4.8.4               |Manifest: NOSIGNATURE
+		iris-neoforge-1.8.12+mc1.21.1.jar                 |Iris                          |iris                          |1.8.12-snapshot+mc1.|Manifest: NOSIGNATURE
+		Jade-1.21.1-NeoForge-15.10.5.jar                  |Jade                          |jade                          |15.10.5+neoforge    |Manifest: NOSIGNATURE
+		jamlib-neoforge-1.3.6+1.21.1.jar                  |JamLib                        |jamlib                        |1.3.6+1.21.1        |Manifest: NOSIGNATURE
+		jei-1.21.1-neoforge-19.27.0.336.jar               |Just Enough Items             |jei                           |19.27.0.336         |Manifest: NOSIGNATURE
+		justzoom_neoforge_2.1.0_MC_1.21.1.jar             |Just Zoom                     |justzoom                      |2.1.0               |Manifest: NOSIGNATURE
+		konkrete_neoforge_1.9.9_MC_1.21.jar               |Konkrete                      |konkrete                      |1.9.9               |Manifest: NOSIGNATURE
+		thedarkcolour.kffmod-5.12.0.jar                   |Kotlin For Forge              |kotlinforforge                |5.12.0              |Manifest: NOSIGNATURE
+		kuma-api-neoforge-21.0.7+1.21.jar                 |KumaAPI                       |kuma_api                      |21.0.7              |Manifest: NOSIGNATURE
+		libraryferret-neoforge-1.21.1-4.0.0.jar           |Library ferret                |libraryferret                 |4.0.0               |Manifest: NOSIGNATURE
+		linearbearing-1.2.6.jar                           |LinearBearing                 |linearbearing                 |1.2.6               |Manifest: NOSIGNATURE
+		lithostitched-1.7.7-neoforge-21.1.jar             |Lithostitched                 |lithostitched                 |1.7.7               |Manifest: NOSIGNATURE
+		MagnumTorch-v21.1.1-1.21.1-NeoForge.jar           |Magnum Torch                  |magnumtorch                   |21.1.1              |Manifest: NOSIGNATURE
+		midgard-1.0.0.jar                                 |MidgardNeoForge               |midgard                       |1.0.0               |Manifest: NOSIGNATURE
+		minecolonies-1.1.1300-1.21.1.jar                  |MineColonies                  |minecolonies                  |1.1.1300-1.21.1     |Manifest: NOSIGNATURE
+		server-1.21.1-20240808.144430-srg.jar             |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		modernfix-neoforge-5.27.20+mc1.21.1.jar           |ModernFix                     |modernfix                     |5.27.20+mc1.21.1    |Manifest: NOSIGNATURE
+		molten_vents-1.21.1-2.1.1.jar                     |Molten Vents                  |molten_vents                  |2.1.1               |Manifest: NOSIGNATURE
+		MouseTweaks-neoforge-mc1.21-2.26.1.jar            |Mouse Tweaks                  |mousetweaks                   |2.26.1              |Manifest: NOSIGNATURE
+		multipiston-1.2.58-1.21.1.jar                     |Multi-Piston                  |multipiston                   |1.2.58-1.21.1       |Manifest: NOSIGNATURE
+		naturalist-1.0.2-neoforge-1.21.1.jar              |Naturalist                    |naturalist                    |1.0.2               |Manifest: NOSIGNATURE
+		NaturesCompass-1.21.1-3.4.0-neoforge.jar          |Nature's Compass              |naturescompass                |1.21.1-3.4.0-neoforg|Manifest: NOSIGNATURE
+		neoforge-21.1.249-universal.jar                   |NeoForge                      |neoforge                      |21.1.249            |Manifest: NOSIGNATURE
+		Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.2.jar |Oh The Trees You'll Grow      |ohthetreesyoullgrow           |5.3.2               |Manifest: NOSIGNATURE
+		optifinecapes-1.0.1.jar                           |OptifineCapes Mod             |optifinecapes                 |1.0.1               |Manifest: NOSIGNATURE
+		OreExcavation-NeoForge-1.21.1-1.16.43.jar         |OreExcavation                 |oreexcavation                 |1.16.43             |Manifest: c4:30:39:dd:35:16:ee:5a:f1:1e:93:a0:ab:b3:75:7f:09:bd:68:20:da:32:8c:17:52:08:42:ed:9c:bc:e1:cb
+		ponder-neoforge-1.0.82+mc1.21.1.jar               |Ponder                        |ponder                        |1.0.82+mc1.21.1     |Manifest: NOSIGNATURE
+		PuzzlesLib-v21.1.51-1.21.1-NeoForge.jar           |Puzzles Lib                   |puzzleslib                    |21.1.51             |Manifest: NOSIGNATURE
+		rechiseled-1.2.4-neoforge-mc1.21.jar              |Rechiseled                    |rechiseled                    |1.2.4               |Manifest: NOSIGNATURE
+		rechiseledcreate-1.1.0-neoforge-mc1.21.jar        |Rechiseled: Create            |rechiseledcreate              |1.1.0               |Manifest: NOSIGNATURE
+		reeses-sodium-options-neoforge-1.8.3+mc1.21.4.jar |Reese's Sodium Options        |reeses_sodium_options         |1.8.3+mc1.21.4      |Manifest: NOSIGNATURE
+		resourcefullib-neoforge-1.21-3.0.12.jar           |Resourceful Lib               |resourcefullib                |3.0.12              |Manifest: NOSIGNATURE
+		rightclickharvest-neoforge-4.6.1+1.21.1.jar       |Right Click Harvest           |rightclickharvest             |4.6.1+1.21.1        |Manifest: NOSIGNATURE
+		ritchiesprojectilelib-2.1.2-mc.1.21.1-neoforge.jar|Ritchie's Projectile Library  |ritchiesprojectilelib         |2.1.2               |Manifest: NOSIGNATURE
+		sable-neoforge-1.21.1-1.2.2.jar                   |Sable                         |sable                         |1.2.2               |Manifest: NOSIGNATURE
+		sable-companion-common-1.21.1-1.6.0.jar           |Sable Companion               |sablecompanion                |1.6.0               |Manifest: NOSIGNATURE
+		sablefloaters-0.0.6.jar                           |Sable: Floaters               |sablefloaters                 |0.0.6               |Manifest: NOSIGNATURE
+		Searchables-neoforge-1.21.1-1.0.2.jar             |Searchables                   |searchables                   |1.0.2               |Manifest: NOSIGNATURE
+		ShoulderSurfing-NeoForge-1.21.1-5.0.10.jar        |Shoulder Surfing Reloaded     |shouldersurfing               |1.21.1-5.0.10       |Manifest: NOSIGNATURE
+		shtreimel-neoforge-1.21.1-0.5.0.jar               |Shtreimel                     |shtreimel                     |0.5.0               |Manifest: NOSIGNATURE
+		voicechat-neoforge-1.21.1-2.6.22.jar              |Simple Voice Chat             |voicechat                     |1.21.1-2.6.22       |Manifest: NOSIGNATURE
+		simplebedrockmodel-2.2.1-neoforge+mc1.21.1.jar    |SimpleBedrockModel            |simplebedrockmodel            |2.2.1-neoforge+mc1.2|Manifest: NOSIGNATURE
+		org.sinytra.connector-2.0.0-beta.14+1.21.1-mod.jar|Sinytra Connector             |connector                     |2.0.0-beta.14+1.21.1|Manifest: NOSIGNATURE
+		sodium-neoforge-0.6.13+mc1.21.1.jar               |Sodium                        |sodium                        |0.6.13+mc1.21.1     |Manifest: NOSIGNATURE
+		sodiumdynamiclights-neoforge-1.0.10-1.21.1.jar    |Sodium Dynamic Lights         |sodiumdynamiclights           |1.0.9               |Manifest: NOSIGNATURE
+		sodiumextras-neoforge-1.0.8-1.21.1.jar            |Sodium Extras                 |sodiumextras                  |1.0.7               |Manifest: NOSIGNATURE
+		sodiumoptionsapi-neoforge-1.0.10-1.21.1.jar       |Sodium Options API            |sodiumoptionsapi              |1.0.10              |Manifest: NOSIGNATURE
+		sophisticatedbackpacks-1.21.1-3.25.48.1759.jar    |Sophisticated Backpacks       |sophisticatedbackpacks        |3.25.48             |Manifest: NOSIGNATURE
+		sophisticatedcore-1.21.1-1.4.41.1867.jar          |Sophisticated Core            |sophisticatedcore             |1.4.41              |Manifest: NOSIGNATURE
+		sound-physics-remastered-neoforge-1.21.1-1.5.1.jar|Sound Physics Remastered      |sound_physics_remastered      |1.21.1-1.5.1        |Manifest: NOSIGNATURE
+		spectrelib-neoforge-0.17.2+1.21.jar               |SpectreLib                    |spectrelib                    |0.17.2+1.21         |Manifest: NOSIGNATURE
+		StageBox-Mod-1.1.1-NeoForge-1.21.1.jar            |StageBox                      |stagebox                      |1.1.1               |Manifest: NOSIGNATURE
+		s_a_b-1.4.3-neoforge-1.21.1.jar                   |Steel armor blocks            |s_a_b                         |1.4.3               |Manifest: NOSIGNATURE
+		StorageDrawers-neoforge-1.21.1-13.11.4.jar        |Storage Drawers               |storagedrawers                |13.11.4             |Manifest: NOSIGNATURE
+		structurize-1.0.822-1.21.1.jar                    |Structurize                   |structurize                   |1.0.822-1.21.1      |Manifest: NOSIGNATURE
+		stylecolonies-1.15.54-1.21.1.jar                  |Stylecolonies                 |stylecolonies                 |1.15.54-1.21.1      |Manifest: NOSIGNATURE
+		supermartijn642configlib-1.1.8-neoforge-mc1.21.jar|SuperMartijn642's Config Libra|supermartijn642configlib      |1.1.8               |Manifest: NOSIGNATURE
+		supermartijn642corelib-1.1.21-neoforge-mc1.21.jar |SuperMartijn642's Core Lib    |supermartijn642corelib        |1.1.21              |Manifest: NOSIGNATURE
+		tacz-tweaks-3.0.0-alpha.10+1.21.1-neoforge.jar    |TaCZ Tweaks                   |tacztweaks                    |3.0.0-alpha.10+1.21.|Manifest: NOSIGNATURE
+		tectonic-3.0.22-neoforge-21.1.jar                 |Tectonic                      |tectonic                      |3.0.22              |Manifest: NOSIGNATURE
+		tp_shooting-neoforge-1.21.1-tacz1.1.8-ssr5-6.0.1.j|Third Person Shooting: Zero   |tp_shooting                   |6.0.1               |Manifest: NOSIGNATURE
+		tacz-neoforge-1.21.1-1.1.8-r2.jar                 |Timeless & Classics Guns: Zero|tacz                          |1.1.8-r2            |Manifest: NOSIGNATURE
+		towntalk-1.2.0.jar                                |Towntalk                      |towntalk                      |1.2.0               |Manifest: NOSIGNATURE
+		TRansition-1.0.17-1.21.1-neoforge-SNAPSHOT.jar    |TRansition                    |transition                    |1.0.17              |Manifest: NOSIGNATURE
+		treeplacer-neoforge-1.21.1-2.0.2.jar              |Treeplacer                    |treeplacer                    |2.0.2               |Manifest: NOSIGNATURE
+		TRender-1.0.12-1.21.1-neoforge-SNAPSHOT.jar       |TRender                       |trender                       |1.0.12              |Manifest: NOSIGNATURE
+		MineColonies_Tweaks-1.21.1-3.30.jar               |Tweaks addon for MineColonies |minecolonies_tweaks           |3.30                |Manifest: NOSIGNATURE
+		blockui-1.0.209-1.21.1.jar                        |UI Library Mod                |blockui                       |1.0.209-1.21.1      |Manifest: NOSIGNATURE
+		UndeadNights-2.2.5-NeoForge-mc1.21.jar            |UndeadNights                  |undeadnights                  |2.2.5-NeoForge-mc1.2|Manifest: NOSIGNATURE
+		veil-neoforge-1.21.1-4.0.0.jar                    |Veil                          |veil                          |4.0.0               |Manifest: NOSIGNATURE
+		waystones-neoforge-1.21.1-21.1.33.jar             |Waystones                     |waystones                     |21.1.33             |Manifest: NOSIGNATURE
+		worldedit-mod-7.3.8.jar                           |WorldEdit                     |worldedit                     |7.3.8+6939-7d32b45  |Manifest: NOSIGNATURE
+		xaerominimap-neoforge-1.21.1-25.3.13.jar          |Xaero's Minimap               |xaerominimap                  |25.3.13             |Manifest: NOSIGNATURE
+		xaeroworldmap-neoforge-1.21.1-1.40.16.jar         |Xaero's World Map             |xaeroworldmap                 |1.40.16             |Manifest: NOSIGNATURE
+		xaerolib-neoforge-1.21.1-1.1.15.jar               |XaeroLib                      |xaerolib                      |1.1.15              |Manifest: NOSIGNATURE
+		yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.ja|YetAnotherConfigLib           |yet_another_config_lib_v3     |3.8.2+1.21.1-neoforg|Manifest: NOSIGNATURE
+	Crash Report UUID: 018a2b12-29c7-4676-af11-c8d89eca7b10
+	FML: 4.0.44
+	NeoForge: 21.1.249
